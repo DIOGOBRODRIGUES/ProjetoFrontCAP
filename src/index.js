@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
   <React.StrictMode>
-    <App />
+  <BrowserRouter>
+    <Routes>
+        <Route path='/' element={<App/>}>
+        </Route>
+        <Route path='cadastro' element={<p>ola tela cadastro</p>}/>
+
+    </Routes>
+  </BrowserRouter>
   </React.StrictMode>
 );
 
